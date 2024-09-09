@@ -1,11 +1,11 @@
 {
   "name": "bulk-get-hash",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.ts",
+  "version": "0.1.0",
+  "description": "Get the sha256 hash of atproto handles or DIDs",
+  "main": "src/index.ts",
   "scripts": {
-    "bulk": "tsx main.ts",
-    "sha": "tsx sha.ts"
+    "start": "tsx src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
