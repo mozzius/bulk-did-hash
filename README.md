@@ -2,7 +2,7 @@
 
 ## `pnpm sha <did>`
 
-Returns the hash
+Returns the hash of the input DID
 
 ## `pnpm bulk <path-to-file.txt>`
 
