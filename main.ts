@@ -13,14 +13,16 @@ const agent = new AtpAgent({
 async function main() {
   const list = await fs.readFile(arg[0], "utf-8");
   const listArray = list.split("\n").filter(Boolean);
-  const handles = [...new Set(listArray)];
+  const handlesOrDids = [...new Set(listArray)];
 
   const dids = await Promise.all(
-    handles.map(async (handle) => {
+    handlesOrDids.map(async (handleOrDid) => {
+      if (handleOrDid.startsWith("did:")) return handleOrDid; // it's a did
+
       const {
         data: { did },
-      } = await agent.resolveHandle({ handle }).catch(() => {
-        console.error("Could not resolve:", handle);
+      } = await agent.resolveHandle({ handle: handleOrDid }).catch(() => {
+        console.error("Could not resolve:", handleOrDid);
         return { data: { did: null } };
       });
       return did;
