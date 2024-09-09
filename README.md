@@ -1,10 +1,10 @@
 # Bulk DID hash
 
-## `pnpm sha <did-or-handle>`
+## `npx bulk-did-hash sha <did-or-handle>`
 
 Returns the hash of the input DID or handle
 
-## `pnpm bulk <path-to-file.txt>`
+## `npx bulk-did-hash bulk <path-to-file.txt>`
 
 Input: Newline separated list of handles or DIDs
 

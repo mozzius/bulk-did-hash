@@ -1,14 +1,21 @@
 {
-  "name": "bulk-get-hash",
-  "version": "0.1.0",
+  "name": "bulk-did-hash",
+  "version": "0.1.1",
   "description": "Get the sha256 hash of atproto handles or DIDs",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "scripts": {
     "start": "tsx src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "atproto"
+  ],
+  "author": "Samuel Newman <mozzius@protonmail.com>",
   "license": "ISC",
   "dependencies": {
     "@atproto/api": "^0.13.6",

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const arg = process.argv.slice(2);
 
 switch (arg[0]) {
@@ -8,6 +10,6 @@ switch (arg[0]) {
     import("./bulk.js");
     break;
   default:
-    console.log("Usage: pnpm sha <did-or-handle>");
-    console.log("Usage: pnpm bulk <path-to-file.txt>");
+    console.log("Usage: npx bulk-did-hash sha <did-or-handle>");
+    console.log("Usage: npx bulk-did-hash bulk <path-to-file.txt>");
 }
