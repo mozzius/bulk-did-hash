@@ -1,6 +1,6 @@
 {
   "name": "bulk-did-hash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Get the sha256 hash of atproto handles or DIDs",
   "main": "dist/index.js",
   "bin": "dist/index.js",

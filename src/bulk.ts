@@ -4,7 +4,7 @@ import { promises as fs } from "node:fs";
 
 const arg = process.argv.slice(3);
 
-if (!arg[3]) throw new Error("Give me a file path");
+if (!arg[0]) throw new Error("Give me a file path");
 
 const agent = new AtpAgent({
   service: "https://public.api.bsky.app",
