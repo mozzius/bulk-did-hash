@@ -1,7 +1,19 @@
-import { sha224 } from "js-sha256";
+import { AtpAgent } from "@atproto/api";
+import { sha256 } from "js-sha256";
 
 const arg = process.argv.slice(2);
 
-if (!arg[0]) throw new Error("Give me a DID");
+const agent = new AtpAgent({
+  service: "https://public.api.bsky.app",
+});
 
-console.log(sha224(arg[0]));
+const didOrHandle = arg[0];
+
+if (!didOrHandle) throw new Error("Give me a DID");
+
+if (didOrHandle.startsWith("did:")) console.log(sha256(didOrHandle));
+else {
+  agent
+    .resolveHandle({ handle: didOrHandle })
+    .then(({ data: { did } }) => console.log(sha256(did)));
+}
