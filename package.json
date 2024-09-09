@@ -1,0 +1,23 @@
+{
+  "name": "bulk-get-hash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "bulk": "tsx main.ts",
+    "sha": "tsx sha.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@atproto/api": "^0.13.6",
+    "js-sha256": "^0.11.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
+  }
+}
